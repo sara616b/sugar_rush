@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5 rem;
+}
+
+header {
+    background-image: url(img/splash.jpg);
+    background-position: left;
+    object-fit: contain;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+nav {
+    background-color: pink;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav button {
+    border: none;
+    background-color: pink;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
