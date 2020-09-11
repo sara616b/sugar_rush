@@ -12,23 +12,27 @@
     <section>
         <header>
             <section id="splash">
-                <img src="img/logo.png" alt="">
+                <img src="img/logo.png" alt="logo">
 
             </section>
 
-            <button id="burger">
-                X
+            <button id="burgerknap">
+                =
             </button>
-            <nav>
-                <button>Alle</button>
-                <button>Sugar Rush</button>
-                <button>Sweet Tooth</button>
-                <button>Snack</button>
+            <nav class="hidden">
+                <button class="filter valgt" data-kategori="alle">Alle</button>
+                <hr>
+                <button class="filter" data-kategori="sugarrush">Sugar Rush</button>
+                <hr>
+                <button class="filter" data-kategori="sweettooth">Sweet Tooth</button>
+                <hr>
+                <button class="filter" data-kategori="snack">Just a Snack</button>
             </nav>
         </header>
     </section>
     <section>
         <p>"Sugar Rush" er til dig, som er klar på en ordentlig omgang sødme og sukker! Sødere bliver det ikke!<br><br>"Sweet Tooth" er til dig, som lige skal stille den søde tand tilfreds!<br><br>"Just a Snack" er til dig, som bare lige skal have en bid på farten! En hurtig sød hapser!</p>
+        <h2>Alle</h2>
         <div id="container">
 
         </div>
@@ -39,6 +43,16 @@
         <img src="img/logo.png" alt="">
     </footer>
 
+    <div id="popup">
+        <section id="popsection">
+            <button id="luk">X</button>
+            <img src="" alt="" id="popbillede">
+            <h3 id="popnavn"></h3>
+            <p id="popopskrift"></p>
+        </section>
+
+    </div>
+
     <template>
         <article>
             <img src="" alt="">
@@ -47,4 +61,6 @@
     </template>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>

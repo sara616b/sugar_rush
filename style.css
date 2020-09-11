@@ -7,17 +7,22 @@ img {
     width: 100%;
 }
 
+body {
+    width: 100vw;
+    max-width: 1000px;
+    margin: auto;
+}
+
 /*__________________header___________________________________________*/
 header {
-    background-color: #d9a7c2;
+    background-color: #aedff2;
 
 }
 
 #splash {
     background-image: url(img/splash.jpg);
-    background-position: left;
+    background-position: left top;
     background-size: cover;
-    width: 100vw;
     height: 200px;
     display: flex;
     align-items: center;
@@ -30,45 +35,78 @@ header img {
 
 nav,
 #burger {
-    background-color: #d9a7c2;
+    background-color: #aedff2;
     display: flex;
     flex-direction: column;
     border: none;
+    height: auto;
 }
 
-#burger {
+hr {
+    width: 90%;
+    align-self: center;
+    border: 1px solid white;
+}
+
+#burgerknap {
     padding: 20px;
     color: white;
+    cursor: pointer;
 }
 
-nav button {
+nav button,
+#burgerknap {
     border: none;
     padding: 10px;
-    background-color: #d9a7c2;
+    background-color: #aedff2;
     font-family: sans-serif;
     color: white;
     font-weight: bold;
     font-size: 1.6rem;
+    cursor: pointer;
+}
+
+nav button:hover {
+    opacity: 0.8;
+}
+
+.valgt {
+    color: #345e6f;
+    background-color: #cfe8f2;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
 }
 
 /*__________________liste___________________________________________*/
 
+h2 {
+    font-family: sans-serif;
+    color: #d9a7c2;
+    text-align: center;
+    font-size: 2rem;
+}
+
 section p {
+    font-family: sans-serif;
     background-color: #d9a7c2;
     margin: 30px;
+    /*padding: 20px;*/
     padding: 40px;
     border-radius: 100px;
     color: white;
 }
 
 #container {
-    width: 100vw;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 #container article {
     margin: 10px 30px;
+    cursor: pointer;
 }
 
 #container img {
@@ -94,7 +132,7 @@ section p {
 /*__________________footer___________________________________________*/
 
 footer {
-    background-color: pink;
+    background-color: #d9a7c2;
     color: white;
     margin-top: 20px;
     padding: 30px;
@@ -107,6 +145,7 @@ footer p {
     flex-basis: 200px;
     flex-grow: 1;
     text-align: center;
+    max-width: 200px;
 }
 
 footer p {
@@ -115,4 +154,81 @@ footer p {
 
 footer img {
     width: 100px;
+    max-width: 150px;
+}
+
+/*__________________popup______________________________________*/
+
+#popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(217, 167, 194, 0.7);
+    display: none;
+    cursor: pointer;
+}
+
+#popup section {
+    width: 80vw;
+    height: 80vh;
+    overflow-y: scroll;
+    margin: 3rem auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    cursor: auto;
+}
+
+#popup button {
+    background-color: white;
+    border: none;
+    color: #d9a7c2;
+    cursor: pointer;
+    margin: 20px;
+    width: 30px;
+
+}
+
+#popup img {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+    object-fit: cover;
+}
+
+#popup h3 {
+    font-family: sans-serif;
+    color: #d9a7c2;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0 0 0;
+}
+
+#popup p {
+    padding: 10px;
+    border-radius: 0;
+    line-height: 130%;
+}
+
+/*__________________media queries______________________________________*/
+
+@media only screen and (min-width: 610px) {
+
+    nav,
+    nav.hidden {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        visibility: visible;
+        padding: 15px;
+        height: auto;
+    }
+
+    #burgerknap,
+    hr {
+        display: none;
+    }
+
 }
