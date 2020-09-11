@@ -1,13 +1,22 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-size: 62.5 rem;
 }
 
+img {
+    width: 100%;
+}
+
+/*__________________header___________________________________________*/
 header {
+    background-color: #d9a7c2;
+
+}
+
+#splash {
     background-image: url(img/splash.jpg);
     background-position: left;
-    object-fit: contain;
+    background-size: cover;
     width: 100vw;
     height: 200px;
     display: flex;
@@ -16,24 +25,94 @@ header {
 }
 
 header img {
-    width: 100px;
-    height: 100px;
-    margin: auto;
+    width: 200px;
 }
 
-nav {
-    background-color: pink;
-    padding: 20px;
+nav,
+#burger {
+    background-color: #d9a7c2;
     display: flex;
     flex-direction: column;
+    border: none;
+}
 
+#burger {
+    padding: 20px;
+    color: white;
 }
 
 nav button {
     border: none;
-    background-color: pink;
+    padding: 10px;
+    background-color: #d9a7c2;
     font-family: sans-serif;
     color: white;
     font-weight: bold;
     font-size: 1.6rem;
+}
+
+/*__________________liste___________________________________________*/
+
+section p {
+    background-color: #d9a7c2;
+    margin: 30px;
+    padding: 40px;
+    border-radius: 100px;
+    color: white;
+}
+
+#container {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+#container article {
+    margin: 10px 30px;
+}
+
+#container img {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#container h3 {
+    color: white;
+    background-color: #b4d9b9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+
+
+
+/*__________________footer___________________________________________*/
+
+footer {
+    background-color: pink;
+    color: white;
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer img,
+footer p {
+    flex-basis: 200px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 30px;
+}
+
+footer img {
+    width: 100px;
 }
