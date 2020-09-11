@@ -6,10 +6,13 @@ let burgerKnap = document.querySelector("#burgerknap");
 let menu = document.querySelector("nav");
 let kager;
 let popup = document.querySelector("#popup");
+let logo = document.querySelector("#logo");
+let kageTitel = document.querySelector("#kageTitel");
+let forside = document.querySelector("#forside");
 
 async function hentData() {
-    console.log("hent data og vis siden");
-    burgerKnap.addEventListener("click", toggleMenu);
+    console.log("hent data og vis kager");
+    logo.addEventListener("click", startForside);
 
     //https://docs.google.com/spreadsheets/d/1RpJ2ywcmwKWlxFSHDWm3-_DR0rgJQfmc7_7T9LjAJfA/edit#gid=0
 
@@ -18,14 +21,23 @@ async function hentData() {
     kager = await respons.json();
     console.log(kager);
 
-    addButtons();
+    startForside();
+};
 
-    vis();
+function startForside() {
+    forside.style.display = "block";
+    container.style.display = "none";
+    kageTitel.style.display = "none";
+    burgerKnap.addEventListener("click", toggleMenu);
+    addButtons();
 };
 
 function vis() {
     console.log("viser kager");
     console.log(kager);
+    forside.style.display = "none";
+    container.style.display = "grid";
+    kageTitel.style.display = "block";
     container.innerHTML = "";
     kager.feed.entry.forEach((kage) => {
         if (filter == "alle" || filter == kage.gsx$kategori.$t) {
@@ -67,7 +79,7 @@ function filterBtn() {
         btn.classList.remove("valgt");
     });
     this.classList.add("valgt");
-    document.querySelector("h2").textContent = this.textContent;
+    kageTitel.textContent = this.textContent;
     vis();
 };
 
@@ -88,27 +100,3 @@ document.querySelector("#luk").addEventListener("click", () => {
 popup.addEventListener("click", () => {
     popup.style.display = "none";
 });
-
-/*
-
-
-function visDetaljer(ret) {
-    console.log(ret);
-    popup.style.display = "block";
-    popup.querySelector("#navn").textContent = ret.gsx$navn.$t;
-    popup.querySelector("img").src = "imgs/small/" + ret.gsx$billede.$t + "-sm.jpg";
-    popup.querySelector("#pris").textContent = ret.gsx$pris.$t + " kr.";
-    popup.querySelector("#lang").textContent = ret.gsx$lang.$t;
-    popup.querySelector("#detaljer").textContent = ret.gsx$kategori.$t + ", " + ret.gsx$oprindelse.$t;
-}
-
-function filterBTNs() {
-    console.log("filterBTNs")
-    filter = this.dataset.kategori;
-    document.querySelectorAll(".filter").forEach((btn) => {
-        btn.classList.remove("valgt");
-    });
-    this.classList.add("valgt");
-    document.querySelector("h2").textContent = this.textContent;
-    vis();
-}*/
