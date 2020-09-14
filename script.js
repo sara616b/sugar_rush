@@ -88,7 +88,7 @@ function visDetaljer(kage) {
     popup.style.display = "block";
     popup.querySelector("#popbillede").src = "img/kage(" + kage.gsx$billede.$t + ").jpg";
     popup.querySelector("#popnavn").textContent = kage.gsx$navn.$t;
-    popup.querySelector("#popopskrift").textContent = kage.gsx$opskrift.$t;
+    popup.querySelector("#popopskrift").innerHTML = kage.gsx$opskrift.$t;
 }
 
 
