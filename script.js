@@ -40,7 +40,7 @@ function vis() {
     kageTitel.style.display = "block";
     container.innerHTML = "";
     kager.feed.entry.forEach((kage) => {
-        if (filter == "alle" || filter == kage.gsx$kategori.$t) {
+        if (filter == "alle" || filter == kage.gsx$type.$t) {
             const klon = template.cloneNode(true).content;
             klon.querySelector("h3").textContent = kage.gsx$navn.$t;
             klon.querySelector("img").src = "img/kage(" + kage.gsx$billede.$t + ").jpg";
