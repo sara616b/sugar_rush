@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Rush</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="img/favicon16.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <section id="splash">
+                <a id="logo" href="index.html">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+
+            </section>
+            <div id="burgerknap">=</div>
+            <nav id="menu" class="hidden">
+                <a href="index.html">Forside</a>
+                <hr>
+                <a href="list_view.html">Opskrifter</a>
+                <hr>
+                <a href="om_os.html">Om Os</a>
+
+            </nav>
+        </header>
+    </section>
+    <div  id="opskrift_menu">
+        <button class="filter" data-kategori="alle">Alle</button>
+        <hr>
+        <button class="filter" data-kategori="Kage">Kage</button>
+        <hr>
+        <button class="filter" data-kategori="Cupcakes">Cupcakes</button>
+        <hr>
+        <button class="filter" data-kategori="Is">Is</button>
+        <hr>
+        <button class="filter" data-kategori="Donuts">Donuts</button>
+        <hr>
+        <button class="filter" data-kategori="Andet">Andet</button>
+        <hr>
+    </div>
+    <section>
+        <h2 id="kageTitel">Alle</h2>
+        <div id="container">
+
+        </div>
+
+    </section>
+    <footer>
+        <p>Kontakt<br>Hello!<br>Sugar Rush<br>Brug af opskrifter på eget ansvar</p>
+        <img src="img/logo.png" alt="logo">
+    </footer>
+
+    <div id="popup">
+        <section id="popsection">
+            <div class="cross"><button id="luk">X</button></div>
+            <img src="" alt="" id="popbillede">
+            <h3 id="popnavn"></h3>
+            <p id="popopskrift"></p>
+        </section>
+
+    </div>
+
+    <template>
+        <article>
+            <img src="" alt="">
+            <h3></h3>
+        </article>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

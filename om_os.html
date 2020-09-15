@@ -11,38 +11,25 @@
 </head>
 
 <body id="om_os">
+    <section>
+        <header>
+            <section id="splash">
+                <a id="logo" href="index.html">
+                    <img src="img/logo.png" alt="logo">
+                </a>
 
-    <header>
-        <section id="splash">
-            <a id="logo" href="index.html">
-                <img src="img/logo.png" alt="logo">
-            </a>
+            </section>
+            <div id="burgerknap">=</div>
+            <nav id="menu" class="hidden">
+                <a href="index.html">Forside</a>
+                <hr>
+                <a href="list_view.html">Opskrifter</a>
+                <hr>
+                <a href="om_os.html">Om Os</a>
 
-        </section>
-
-        <button id="burgerknap">
-            =
-        </button>
-        <nav class="hidden">
-            <button><a href="index.html">Forside</a></button>
-            <hr>
-            <button class="filter" data-kategori="alle"><a href="index.html">Alle</a></button>
-            <hr>
-            <button class="filter" data-kategori="Kage"><a href="index.html">Kage</a></button>
-            <hr>
-            <button class="filter" data-kategori="Cupcakes"><a href="index.html">Cupcakes</a></button>
-            <hr>
-            <button class="filter" data-kategori="Is"><a href="index.html">Is</a></button>
-
-            <hr>
-            <button class="filter" data-kategori="Donuts"><a href="index.html">Donuts</a></button>
-            <hr>
-            <button class="filter" data-kategori="Andet"><a href="index.html">Andet</a></button>
-            <hr>
-            <button><a href="om_os.html">Om os</a></button>
-
-        </nav>
-    </header>
+            </nav>
+        </header>
+    </section>
 
     <section class="content">
         <div class="text">
@@ -55,19 +42,51 @@
             <div class="photo2"><img src="img/kage(12).jpg" alt="cupcakes"></div>
         </div>
 
-
     </section>
-
-
-
-
 
     <footer>
         <p>Kontakt<br>Hello!<br>Sugar Rush<br>Brug af opskrifter på eget ansvar</p>
         <img src="img/logo.png" alt="logo">
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+        let burgerKnap = document.querySelector("#burgerknap");
+        let menu = document.querySelector("nav");
+        let dropdownKnap = document.querySelector("#dropdownknap");
+        let dropdownMenu = document.querySelector("#dropdown");
+        let kager;
+
+        async function start() {
+            console.log("start");
+            burgerKnap.addEventListener("click", toggleMenu);
+            const link = "https://spreadsheets.google.com/feeds/list/1RpJ2ywcmwKWlxFSHDWm3-_DR0rgJQfmc7_7T9LjAJfA/od6/public/values?alt=json";
+            const respons = await fetch(link);
+            kager = await respons.json();
+
+        }
+
+
+        //klapper burgermenu sammen og ud igen
+        function toggleMenu() {
+            console.log("toggleMenu");
+            if (this == burgerKnap) {
+                menu.classList.toggle("hidden");
+            } else if (this == dropdownKnap) {
+                dropdownMenu.classList.toggle("hidden");
+            }
+
+            burgerKnap.textContent = "=";
+
+            if (menu.classList.contains("hidden")) {
+                burgerKnap.textContent = "=";
+            } else {
+                burgerKnap.textContent = "X";
+            }
+        };
+
+    </script>
+
 </body>
 
 </html>

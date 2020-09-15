@@ -14,7 +14,6 @@ let forside = document.querySelector("#forside");
 //henter data og starter forsiden
 async function hentData() {
     console.log("hent data og vis kager");
-    logo.addEventListener("click", startForside);
 
     //https://docs.google.com/spreadsheets/d/1RpJ2ywcmwKWlxFSHDWm3-_DR0rgJQfmc7_7T9LjAJfA/edit#gid=0
 
@@ -22,26 +21,15 @@ async function hentData() {
     const respons = await fetch(link);
     kager = await respons.json();
     console.log(kager);
-
-    startForside();
-};
-
-//viser forsideelementerne og viser ikke listview-elementerne
-function startForside() {
-    forside.style.display = "block";
-    container.style.display = "none";
-    kageTitel.style.display = "none";
     burgerKnap.addEventListener("click", toggleMenu);
     addButtons();
+    vis();
 };
 
 //fjerner forsideelementerne og viser listviewet med et grid udfra valgt filter
 function vis() {
     console.log("viser kager");
     console.log(kager);
-    forside.style.display = "none";
-    container.style.display = "grid";
-    kageTitel.style.display = "block";
     container.innerHTML = "";
     kager.feed.entry.forEach((kage) => {
         if (filter == "alle" || filter == kage.gsx$type.$t) {
@@ -58,9 +46,8 @@ function vis() {
 //klapper burgermenu sammen og ud igen
 function toggleMenu() {
     console.log("toggleMenu");
-    menu.classList.toggle("hidden");
 
-    burgerKnap.textContent = "=";
+    menu.classList.toggle("hidden");
 
     if (menu.classList.contains("hidden")) {
         burgerKnap.textContent = "=";

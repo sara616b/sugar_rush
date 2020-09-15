@@ -15,7 +15,7 @@ body {
 
 /*__________________header___________________________________________*/
 header {
-    background-color: #aedff2;
+    background-color: #9dc7d8;
 
 }
 
@@ -35,11 +35,12 @@ header img {
 
 nav,
 #burger {
-    background-color: #aedff2;
+    background-color: #9dc7d8;
     display: flex;
     flex-direction: column;
     border: none;
     height: auto;
+    align-items: center;
 }
 
 hr {
@@ -54,16 +55,24 @@ hr {
     cursor: pointer;
 }
 
-nav button,
+nav a,
+nav div,
 #burgerknap {
     border: none;
     padding: 10px;
-    background-color: #aedff2;
+    background-color: #9dc7d8;
     font-family: sans-serif;
     color: white;
     font-weight: bold;
     font-size: 1.6rem;
     cursor: pointer;
+    text-decoration: none;
+}
+
+#burger_opskrifter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 nav button:hover {
@@ -77,7 +86,27 @@ nav button:hover {
 
 .hidden {
     visibility: hidden;
+    display: none;
     height: 0;
+}
+
+/*__________________filterknapper_____________________________________*/
+
+#opskrift_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.filter {
+    border: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #9dc7d8;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: white;
 }
 
 /*__________________liste___________________________________________*/
@@ -87,6 +116,7 @@ h2 {
     color: #d9a7c2;
     text-align: center;
     font-size: 2rem;
+    padding-top: 20px;
 }
 
 section p {
@@ -294,7 +324,7 @@ footer img {
         display: none;
     }
 
-     #popup img {
+    #popup img {
         width: 20%;
     }
 
