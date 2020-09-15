@@ -371,7 +371,14 @@ footer img {
     /*_________________Footer start___________________*/
     /*_______________________________________________*/
 
-    }
+    footer img,
+footer p {
+    flex-basis: 400px;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 400px;
+}
+
 
     footer p {
         margin-top: 30px;
