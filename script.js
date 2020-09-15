@@ -10,6 +10,8 @@ let logo = document.querySelector("#logo");
 let kageTitel = document.querySelector("#kageTitel");
 let forside = document.querySelector("#forside");
 
+
+//henter data og starter forsiden
 async function hentData() {
     console.log("hent data og vis kager");
     logo.addEventListener("click", startForside);
@@ -24,6 +26,7 @@ async function hentData() {
     startForside();
 };
 
+//viser forsideelementerne og viser ikke listview-elementerne
 function startForside() {
     forside.style.display = "block";
     container.style.display = "none";
@@ -32,6 +35,7 @@ function startForside() {
     addButtons();
 };
 
+//fjerner forsideelementerne og viser listviewet med et grid udfra valgt filter
 function vis() {
     console.log("viser kager");
     console.log(kager);
@@ -51,6 +55,7 @@ function vis() {
     });
 };
 
+//klapper burgermenu sammen og ud igen
 function toggleMenu() {
     console.log("toggleMenu");
     menu.classList.toggle("hidden");
@@ -64,6 +69,7 @@ function toggleMenu() {
     }
 };
 
+//gør filter-knapperne klikbare
 function addButtons() {
     console.log("addButtons -> adds eventlisteners to buttons")
     document.querySelectorAll(".filter").forEach((btn) => {
@@ -71,6 +77,8 @@ function addButtons() {
     });
 };
 
+
+//ved klik på filterknapperne sættes filter til valgte og starter vis-funktionen igen
 function filterBtn() {
     console.log("filterBtn: " + this.textContent);
     filter = this.dataset.kategori;
@@ -83,6 +91,7 @@ function filterBtn() {
     vis();
 };
 
+//ved klik på kage vises popup-vindue over listviewet og overskrift og text sættes med textContent og innerHTML
 function visDetaljer(kage) {
     console.log(kage);
     popup.style.display = "block";
@@ -91,12 +100,13 @@ function visDetaljer(kage) {
     popup.querySelector("#popopskrift").innerHTML = kage.gsx$opskrift.$t;
 }
 
-
+//gør luk-knap i popup klikbar
 document.querySelector("#luk").addEventListener("click", () => {
     popup.style.display = "none";
     popup.querySelector("#luk").textContent = "X";
 });
 
+//lukker popup
 popup.addEventListener("click", () => {
     popup.style.display = "none";
 });
