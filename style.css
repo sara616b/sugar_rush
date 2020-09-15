@@ -157,6 +157,19 @@ footer img {
 }
 
 /*__________________popup______________________________________*/
+* width */::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+
+
+.cross {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
 
 #popup {
     position: fixed;
@@ -169,6 +182,8 @@ footer img {
     cursor: pointer;
 }
 
+
+
 #popup section {
     width: 80vw;
     height: 80vh;
@@ -178,7 +193,14 @@ footer img {
     display: flex;
     flex-direction: column;
     cursor: auto;
+    padding: 10px;
+    border-radius: 13px;
+
+
+
 }
+
+
 
 #popup button {
     background-color: white;
@@ -188,14 +210,22 @@ footer img {
     margin: 20px;
     width: 30px;
 
+
+
 }
 
+
+
 #popup img {
-    width: 80%;
+    width: 80% auto;
     margin: 0 auto;
     height: 300px;
     object-fit: cover;
+    border-radius: 13px;
+    margin: 2em auto;
 }
+
+
 
 #popup h3 {
     font-family: sans-serif;
@@ -205,11 +235,45 @@ footer img {
     margin: 20px 0 0 0;
 }
 
+
+
 #popup p {
-    padding: 10px;
-    border-radius: 0;
+    border-radius: 13px;
     line-height: 130%;
 }
+
+
+/*_________________Om Os start___________________*/
+/*_______________________________________________*/
+
+#om_os .text {}
+
+
+#om_os .photos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#om_os .photo1,
+#om_os .photo2 {
+    display: flex;
+    justify-content: center;
+}
+
+
+#om_os .photos img {
+    width: 65%;
+    height: auto;
+    border-radius: 30px;
+}
+
+
+/*_________________Om Os slut___________________*/
+/*_______________________________________________*/
+
+
+
 
 /*__________________media queries______________________________________*/
 
@@ -229,5 +293,46 @@ footer img {
     hr {
         display: none;
     }
+
+     #popup img {
+        width: 20%;
+    }
+
+
+
+    /*_________________Om Os start___________________*/
+    /*_______________________________________________*/
+
+
+    #om_os .content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #om_os .photos {
+        display: flex;
+        align-items: center;
+    }
+
+    #om_os .photo1,
+    #om_os .photo2 {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #om_os .photos img {
+        width: 90%;
+        height: auto;
+        border-radius: 30px;
+    }
+
+
+    /*_________________Om Os slut___________________*/
+    /*_______________________________________________*/
+
+
+
+
 
 }
