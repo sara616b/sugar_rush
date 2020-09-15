@@ -182,6 +182,12 @@ footer p {
     color: #9dc7d8;
 }
 
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+}
+
 footer img {
     width: 100px;
     max-width: 150px;
