@@ -371,23 +371,18 @@ footer img {
     /*_________________Footer start___________________*/
     /*_______________________________________________*/
 
-
-    footer img,
-    footer p {
-        flex-basis: 200px;
-        flex-grow: 1;
-        max-width: 200px;
     }
 
     footer p {
         margin-top: 30px;
         color: #9dc7d8;
+        text-align: left;
     }
 
 
     footer img {
         width: 50%;
-        max-width: 150px;
+        height: auto;
     }
 
     /*_________________Footer slut___________________*/
