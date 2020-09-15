@@ -15,7 +15,7 @@ body {
 
 /*__________________header___________________________________________*/
 header {
-    background-color: #aedff2;
+    background-color: #9dc7d8;
 
 }
 
@@ -35,7 +35,7 @@ header img {
 
 nav,
 #burger {
-    background-color: #aedff2;
+    background-color: #9dc7d8;
     display: flex;
     flex-direction: column;
     border: none;
@@ -58,7 +58,7 @@ nav button,
 #burgerknap {
     border: none;
     padding: 10px;
-    background-color: #aedff2;
+    background-color: #9dc7d8;
     font-family: sans-serif;
     color: white;
     font-weight: bold;
@@ -131,7 +131,8 @@ section p {
 /*__________________footer___________________________________________*/
 
 footer {
-    background-color: #d9a7c2;
+    background-color: #A66A8B
+#FED7EA;
     color: white;
     margin-top: 20px;
     padding: 30px;
