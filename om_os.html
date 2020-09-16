@@ -46,49 +46,15 @@
 
     <footer>
         <div class="contact">
-        <strong><p>Kontakt</p></strong>
-        <p>Tlf.: +45 4522 4522<br>Mail: sugar@rush.dk</p>
+            <strong>
+                <p>Kontakt</p>
+            </strong>
+            <p>Tlf.: +45 4522 4522<br>Mail: sugar@rush.dk</p>
         </div>
         <img src="img/logo.png" alt="logo">
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", start);
-        let burgerKnap = document.querySelector("#burgerknap");
-        let menu = document.querySelector("nav");
-        let dropdownKnap = document.querySelector("#dropdownknap");
-        let dropdownMenu = document.querySelector("#dropdown");
-        let kager;
-
-        async function start() {
-            console.log("start");
-            burgerKnap.addEventListener("click", toggleMenu);
-            const link = "https://spreadsheets.google.com/feeds/list/1RpJ2ywcmwKWlxFSHDWm3-_DR0rgJQfmc7_7T9LjAJfA/od6/public/values?alt=json";
-            const respons = await fetch(link);
-            kager = await respons.json();
-
-        }
-
-
-        //klapper burgermenu sammen og ud igen
-        function toggleMenu() {
-            console.log("toggleMenu");
-            if (this == burgerKnap) {
-                menu.classList.toggle("hidden");
-            } else if (this == dropdownKnap) {
-                dropdownMenu.classList.toggle("hidden");
-            }
-
-            burgerKnap.textContent = "=";
-
-            if (menu.classList.contains("hidden")) {
-                burgerKnap.textContent = "=";
-            } else {
-                burgerKnap.textContent = "X";
-            }
-        };
-
-    </script>
+    <script src="menu.js"></script>
 
 </body>
 

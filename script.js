@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", hentData);
 let container = document.querySelector("#container");
 let template = document.querySelector("template");
 let filter = "alle";
-let burgerKnap = document.querySelector("#burgerknap");
-let menu = document.querySelector("nav");
 let kager;
 let popup = document.querySelector("#popup");
 let logo = document.querySelector("#logo");
@@ -43,18 +41,7 @@ function vis() {
     });
 };
 
-//klapper burgermenu sammen og ud igen
-function toggleMenu() {
-    console.log("toggleMenu");
 
-    menu.classList.toggle("hidden");
-
-    if (menu.classList.contains("hidden")) {
-        burgerKnap.textContent = "=";
-    } else {
-        burgerKnap.textContent = "X";
-    }
-};
 
 //gør filter-knapperne klikbare
 function addButtons() {
