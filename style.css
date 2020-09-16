@@ -171,10 +171,9 @@ footer {
 
 footer img,
 footer p {
-    flex-basis: 200px;
+    flex-basis: 100px;
     flex-grow: 1;
     text-align: center;
-    max-width: 200px;
 }
 
 footer p {
@@ -372,12 +371,10 @@ footer img {
     /*_______________________________________________*/
 
     footer img,
-footer p {
-    flex-basis: 400px;
-    flex-grow: 1;
-    text-align: center;
-    max-width: 400px;
-}
+    footer p {
+        flex-grow: 1;
+        text-align: center;
+    }
 
 
     footer p {
@@ -386,11 +383,6 @@ footer p {
         text-align: left;
     }
 
-
-    footer img {
-        width: 20px;
-        height: auto;
-    }
 
     /*_________________Footer slut___________________*/
     /*_______________________________________________*/
