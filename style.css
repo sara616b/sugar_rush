@@ -9,7 +9,7 @@ img {
 
 body {
     width: 100vw;
-    max-width: 1000px;
+    max-width: 1263px;
     margin: auto;
 }
 
@@ -136,6 +136,7 @@ section p {
 #container article {
     margin: 10px 30px;
     cursor: pointer;
+
 }
 
 #container img {
@@ -143,15 +144,22 @@ section p {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    padding: 15px;
 }
 
 #container h3 {
     color: white;
+    padding: 7px;
     background-color: #b4d9b9;
-    padding: 20px;
-    margin: 10px;
+    margin: 13px;
     border-radius: 30px;
     text-align: center;
+    font-size: 1em;
+    box-shadow: 7px 7px 3px 0px rgba(0, 0, 0, 0.01);
+    border: solid 5px #b0d4b5;
 }
 
 
@@ -171,9 +179,10 @@ footer {
 
 footer img,
 footer p {
-    flex-basis: 100px;
+    /*    flex-basis: 200px;*/
     flex-grow: 1;
     text-align: center;
+    max-width: 200px;
 }
 
 footer p {
@@ -372,8 +381,10 @@ footer img {
 
     footer img,
     footer p {
+        /*    flex-basis: 400px;*/
         flex-grow: 1;
         text-align: center;
+        /*    max-width: 400px;*/
     }
 
 
@@ -383,6 +394,11 @@ footer img {
         text-align: left;
     }
 
+
+    footer img {
+        width: 20px;
+        height: auto;
+    }
 
     /*_________________Footer slut___________________*/
     /*_______________________________________________*/
