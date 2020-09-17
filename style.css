@@ -13,6 +13,13 @@ body {
     margin: auto;
 }
 
+/*_Hover over buttons in menus and elements of grid view_*/
+nav a:hover,
+.filter:hover,
+#container article:hover {
+    opacity: 0.8;
+}
+
 /*__________________header___________________________________________*/
 header {
     background-color: #9dc7d8;
@@ -75,8 +82,8 @@ nav div,
     justify-content: flex-start;
 }
 
-nav button:hover {
-    opacity: 0.8;
+nav strong {
+    color: #197296;
 }
 
 .valgt {
@@ -123,9 +130,6 @@ nav button:hover {
 }
 
 
-
-
-
 /*-----------------------forside------------------------------------*/
 
 #forside img {}
@@ -169,10 +173,6 @@ section p {
     margin: 10px 30px;
     cursor: pointer;
 
-}
-
-#container article:hover {
-    opacity: 0.8;
 }
 
 #container img {
@@ -416,6 +416,10 @@ footer img {
         width: 90%;
         height: auto;
         border-radius: 30px;
+    }
+
+    #om_os .photo2 {
+        margin-right: 30px;
     }
 
 
